@@ -1,0 +1,219 @@
+<DOCTYPE!>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>conteudo</title>
+	
+	<style>
+		body{
+		  font-family: Arial, sans-serif;
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		  font-size: 18px;
+		}
+		.header{
+		  background-color: #c96b3c;
+		  padding-right: 30px;
+		  padding-left: 30px;
+		  height: 10%;
+		  display: flex;
+		  align-items: center;
+		  justify-content: space-between;
+		}
+		.logo{
+		  font-size: 35px;
+		  font-weight: 600;
+		  color: white;
+		}
+		li{
+		  list-style: none;
+		  display: inline-block;
+		}
+		li a{
+		  color: white;
+		  font-size: 18px;
+		  font-weight: bold;
+		  margin-right: 25px;
+		}
+		.home{
+		  display: flex;
+		  text-align: left;
+		  justify-content: center;
+		  margin: auto;
+		  padding: 20px;
+		  width: 90%;
+		}
+		.home img{
+		  width: 250px;
+		  height: 250px;
+		  border-radius: 50%;
+		  margin-right: 40px;
+		}
+		.home-texto h2 span,
+		.conteudo p span,
+		.conteudo h2 span,
+		.conteudo-texto2 h2 span,
+		.texto h2 span{
+		  color: #c96b3c;
+		}
+		.conteudo-texto2{
+		  font-size: 18px;
+		  justify-content: column;
+		  text-align: flex-start;
+		  margin: auto;
+		  padding: 20px;
+		  width: 90%;
+		}
+		.conteudo{
+		  border: 2px solid #c96b3c;
+		  border-radius: 20px;
+		  display: flex;
+		  justify-content: center;
+		  text-align: flex-start;
+		  margin: auto;
+		  padding: 20px;
+		  width: 90%;
+		}
+		.conteudo img{
+		  width: 600px;
+		  height:225px;
+		  margin: auto;
+		}
+		
+		.container{
+	 	  background-color: #c96b3c;
+	 	  display: flex;
+	 	  flex-direction: column;
+	 	  gap: 20px;
+	 	  padding: 20px;
+	 	  width: 88%;
+	 	  margin: auto;
+	 	  border-radius: 20px;
+		 }
+	
+		.item {
+		  background-color: white;
+		  display: flex;
+		  gap: 50px;
+		  align-items: stretch;
+		  padding: 100px;
+		  border-radius: 20px;
+		  color: black;
+		  font-size: 20px;
+		}
+		
+		.item img{
+		  width: 600px;
+		  height: auto;
+		}
+	</style>
+</head>
+<body>
+	<nav class="header">
+		<div class="logo"<a href="#">PortasLógicas</a></div>
+		<ul>
+			<li><a href="index.html">Conteúdo</a></li>
+			<li><a href="exercicios.html">Exercícios</a></li>
+			<li><a href="avaliacao.html">Avaliação</a></li>
+		</ul>
+	</nav>
+
+	<section class="home">
+		<img src="https://i.pinimg.com/736x/cd/e8/3d/cde83d2ef3dd1195f9935f2c9f5d2227.jpg">
+		<div class="home-texto">
+		<h2><span> PORTAS LÓGICAS: CONCEITO E IMPORTÂNCIA</span></h2>
+		<p>As portas lógicas são pequenas partes eletrônicas que formam a base de todos os aparelhos digitais. Elas trabalham com números binários, ou seja, apenas 0 e 1, e usam essas entradas para gerar uma saída seguindo regras específicas. Estão presentes em tudo, desde calculadoras até computadores mais avançados, permitindo que realizem cálculos, armazenem informações e tomem decisões. Entre os principais tipos estão AND, OR, NOT, NAND, NOR, XOR e XNOR, cada um com uma função diferente. Entender como elas funcionam é importante para quem quer aprender eletrônica, programação ou áreas de tecnologia, pois ajuda a desenvolver o raciocínio lógico e a capacidade de resolver problemas.<br><br>As portas lógicas mais comuns são:</p>
+		</div>
+	</section>
+	<div class= "conteudo">
+		<img src="https://inetec.com.br/wp-content/uploads/2024/09/portas_logicas.png">
+		<div class="conteudo-texto">
+		<p>Porta <strong><span>AND</span></strong>: Retorna 1 apenas quando todas as suas entradas são 1.<br><br>
+Porta <strong><span>NAND</span></strong>: Retorna 0 apenas quando todas as suas entradas são 1. É a negação da porta AND.<br><br>
+Porta <strong><span>OR</span></strong>: Retorna 1 quando pelo menos uma das suas entradas é 1.<br><br>
+Porta <strong><span>NOR</span></strong>: Retorna 1 apenas quando todas as suas entradas são 0. É a negação da porta OR.<br><br>
+Porta <strong><span>NOT</span></strong>: Inverte o valor da entrada; retorna 0 para entrada 1 e 1 para entrada 0.<br><br>
+Porta <strong><span>XOR</span></strong>: Retorna 1 quando um número ímpar de entradas é 1.<br><br>
+Porta <strong><span>XNOR</span></strong>: Retorna 1 quando um número par de entradas é 1. É a negação da porta XOR.</p>
+		</div>
+	</div>
+	<div class="conteudo-texto2">
+	<h2><span>PORTAS LÓGICAS: TABELA DA VERDADE</span></h2> <p>Uma tabela da verdade é usada para mostrar como uma porta lógica funciona, apresentando todas as combinações possíveis das entradas e a saída correspondente para cada uma delas. Cada linha da tabela da verdade representa uma combinação única das entradas. Para uma porta lógica com n entradas, existem 2^n combinações possíveis de entradas. Por exemplo, para uma porta com duas entradas (A e B), há 4 combinações possíveis: (0,0), (0,1), (1,0), e (1,1). 
+A coluna de saída mostra o resultado da operação lógica para cada combinação de entradas.
+A tabela é organizada em colunas, com cada coluna representando uma entrada ou a saída. A primeira parte da tabela lista todas as combinações possíveis das entradas em formato binário (0 ou 1).
+A última coluna da tabela representa a saída da porta lógica para cada combinação de entradas.<br><br> Assita a esse vídeo para entender como funciona cada porta lógica, com exemplos usando a tabela da verdade: <br></p>
+	<iframe width="100%" height="450px" src="https://www.youtube.com/embed/mp3g9IQ651g?si=bFk28Hl42CbXg2_a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<br><p>Agora vou mostrar como cada porta lógica opera:</p>
+ 	</div>
+ 	<div class="container">
+		<div class="item">
+		<img src="http://makerhero.com/wp-content/uploads/2024/08/O-que-sao-Portas-Logicas_-Tipos-tabela-da-verdade-e-exercicios-img-blog-3-1.png.webp">
+		<div class="texto">
+		<h2><strong><span>PORTA AND</strong></span></h2>
+		<p>A porta AND realiza a operação de multiplicação lógica, também conhecida como conjunção lógica. Ela produz uma saída verdadeira (1) apenas quando todas as suas entradas são verdadeiras (1). Se qualquer uma das entradas for falsa (0), a saída será falsa (0).
+</p>
+		</div>
+		</div>
+		
+		<div class="item">
+		<img src="https://www.makerhero.com/wp-content/uploads/2024/08/O-que-sao-Portas-Logicas_-Tipos-tabela-da-verdade-e-exercicios-img-blog-4-1.png.webp">
+		<div class="texto">
+		<h2><strong><span>PORTA OR</strong></span></h2>
+		<p>A porta OR realiza a operação de adição lógica, também conhecida como disjunção lógica. Ela produz uma saída verdadeira (1) se pelo menos uma de suas entradas for verdadeira (1). Se todas as entradas forem falsas (0), a saída será falsa (0).
+</p>
+		</div>
+		</div>
+		
+		<div class="item">
+		<img src="https://www.makerhero.com/wp-content/uploads/2024/08/O-que-sao-Portas-Logicas_-Tipos-tabela-da-verdade-e-exercicios-img-blog-5-1.png.webp">
+		<div class="texto"><h2><strong><span>PORTA NOT</strong></span></h2>
+		
+		<p>A porta NOT realiza a operação de negação lógica. Ela produz uma saída verdadeira (1) apenas quando a sua entrada é falsa (0). Se a entrada for verdadeira (1), a saída será falsa (0).
+</p>
+		</div>
+		</div>
+		
+		<div class="item">
+		<img src="https://www.makerhero.com/wp-content/uploads/2024/08/O-que-sao-Portas-Logicas_-Tipos-tabela-da-verdade-e-exercicios-img-blog-6-1.png.webp">
+		<div class="texto">
+		<h2><strong><span>PORTA NAND</strong></span></h2>
+		<p>A porta NAND é uma abreviação de “NOT AND” (NÃO AND). Ela realiza a operação lógica de negação da operação AND. A saída da porta NAND é falsa (0) somente quando todas as suas entradas são verdadeiras (1). Em todas as outras situações, a saída é verdadeira (1).</p>
+		</div>
+		</div>
+		
+		<div class="item">
+		<img src="https://www.makerhero.com/wp-content/uploads/2024/08/O-que-sao-Portas-Logicas_-Tipos-tabela-da-verdade-e-exercicios-img-blog-7-1.png.webp">
+		<div class="texto">
+		<h2><strong><span>PORTA NOR</strong></span></h2>
+		<p>A porta NOR é uma abreviação de “NOT OR” (NÃO OR). Ela realiza a operação lógica de negação da operação OR. A saída da porta NOR é verdadeira (1) somente quando todas as suas entradas são falsas (0). Em todas as outras situações, a saída é falsa (0).</p>
+		</div>
+		</div>
+		
+		<div class="item">
+		<img src="https://www.makerhero.com/wp-content/uploads/2024/08/O-que-sao-Portas-Logicas_-Tipos-tabela-da-verdade-e-exercicios-img-blog-8-1.png.webp">
+		<div class="texto">
+		<h2><strong><span>PORTA XOR</strong></span></h2>
+		<p>A porta XOR é uma porta lógica que realiza uma operação de disjunção exclusiva. Ela produz uma saída verdadeira (1) somente quando um número ímpar de suas entradas são verdadeiras. Em outras palavras, a porta XOR produz uma saída verdadeira (1) quando as entradas são diferentes entre si.</p>
+		</div>
+		</div>
+		
+		<div class="item">
+		<img src="https://www.makerhero.com/wp-content/uploads/2024/08/O-que-sao-Portas-Logicas_-Tipos-tabela-da-verdade-e-exercicios-img-blog-9-1.png.webp">
+		<div class="texto">
+		<h2><strong><span>PORTA XNOR</strong></span></h2>
+		<p>A porta XNOR é a combinação de uma porta XOR seguida por uma porta NOT. Ela realiza a operação de equivalência lógica. A porta XNOR produz uma saída verdadeira (1) quando suas entradas são iguais, seja ambas verdadeiras (1) ou ambas falsas (0). Se as entradas são diferentes, a saída é falsa (0).</p>
+		</div>
+		</div>
+	</div>
+	
+	<div class="conteudo-texto2">
+	<h2><span>VEJA MAIS NESSES MATERIAIS:</span></h2> 
+		<a href="https://youtu.be/aYVz0l3ZMWc?si=BdBe5BK4quCWjPY3" target="_blank" rel="externel">Expressões Booleanas</a><br><br>
+		<a href="https://youtu.be/1lsU6RoU9Ko?si=Ud9WKpkbFiD3QHrb" target="_blank" rel="externel" >Circuitos Digitais</a>
+
+ 	</div>
+
+</body>
+</html>

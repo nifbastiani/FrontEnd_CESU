@@ -1,0 +1,112 @@
+<DOCTYPE!>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title> avaliacao </title>
+<style>
+		body{
+		  font-family: Arial, sans-serif;
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		}
+		.header{
+		  background-color: #c96b3c;
+		  padding-right: 30px;
+		  padding-left: 30px;
+		  height: 10%;
+		  display: flex;
+		  align-items: center;
+		  justify-content: space-between;
+		}
+		.logo{
+		  font-size: 35px;
+		  font-weight: 600;
+		  color: white;
+		}
+		li{
+		  list-style: none;
+		  display: inline-block;
+		}
+		li a{
+		  color: white;
+		  font-size: 18px;
+		  font-weight: bold;
+		  margin-right: 25px;
+		}
+		
+		form{
+ 		 margin: 20px;
+ 		 padding: 15px;
+ 		 border: 2px solid #c96b3c;
+ 		 border-radius: 10px;
+		}
+
+		input,
+		select,
+		textarea{
+ 		 margin: 5px 0 10px 0;
+  	  	 padding: 5px;
+		}
+
+		button{
+ 		 background-color: #c96b3c;
+ 		 color: white;
+ 		 border: none;
+ 		 padding: 5px 10px;
+ 		 border-radius: 5px;
+		}
+		
+		button:hover{
+		  background-color: black;
+		  color: white;
+		}
+
+</style>
+</head>
+
+<body>
+	<nav class="header">
+		<div class="logo"<a href="#">PortasLógicas</a></div>
+		<ul>
+			<li><a href="index.html">Conteúdo</a></li>
+			<li><a href="exercicios.html">Exercícios</a></li>
+			<li><a href="avaliacao.html">Avaliação</a></li>
+		</ul>
+	</nav>
+
+	<form>
+
+	<h2><span>Feedback do Site</span></h2>
+
+	<label>O que você achou do site?</label><br>
+	<select>
+  	 <option>Bom</option>
+   	 <option>Mediano</option>
+  	 <option>Precisa melhorar</option>
+	</select><br><br>
+	
+	<label>Você conseguiu compreender o conteúdo?</label><br>
+	<select>
+  	 <option>Sim</option>
+   	 <option>Mais ou menos</option>
+  	 <option>Não</option>
+	</select><br><br>
+	
+	<label>Achou as perguntas difíceis comparado ao nível do conteúdo?</label><br>
+	<select>
+  	 <option>Sim</option>
+   	 <option>Mais ou menos</option>
+  	 <option>Não</option>
+	</select><br><br>
+	
+
+	<label>O que gostaria que mudasse:</label><br>
+	<textarea rows="5" cols="40"></textarea><br><br>
+
+	<button type="submit">Enviar Feedback</button>
+
+	</form>
+</body>
+</html>
