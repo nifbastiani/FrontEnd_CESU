@@ -1,84 +1,269 @@
 	*{
 	  box-sizing: border-box;
+	  margin: 0;
+	  padding: 0;
 	}
 	
 	body {
- 	  background-color: #F2F5F7;	
+ 	  background-color: #F2F5F7;
+ 	  font-family: "Georgia", serif;
+ 	  line-height: 1.6;
 	}
 
-	#topo{
+	#pagina{
+	  width: 90%;
+	  max-width: 1300px;
+	  margin: auto;
+	}
+
+	header{
   	  text-align: center;
- 	  margin-bottom: 40px;
  	  background-color: #09202b;
  	  color: white;
  	  padding: 30px;
+ 	  margin-bottom: 40px;
 	}
 	
-	#menu-principal ul{
+	header p{
+	  margin-top: 10px;
+	}
+	
+	ul{
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
+          gap: 15px;
           list-style: none;
-          padding: 0;
+          margin-top: 20px;
+          flex-wrap: wrap;
         }
 	
-	#menu-principal li{
+	#menu-principal li,
+	#menu-secundario li,
+	#menu-terceiro li{
 	  background-color: #0c2a39;
-	  width: 15%;
-	  padding: 20px;
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  border-radius: 50px;
+	  padding: 12px 20px;
+	  border-radius: 30px;
 	}
 	
-	#menu-principal li:hover{
+	#menu-principal li:hover,
+	#menu-secundario li:hover,
+	#menu-terceiro li:hover{
 	  background-color: #e0e0e0;
 	}
 	
-	#menu-principal li:hover a{
+	#menu-principal li:hover a,
+	#menu-secundario li:hover a,
+	#menu-terceiro li:hover a{
 	  color: #0c2a39;
 	}
 	
-	#menu-principal a{
+	#menu-principal a,
+	#menu-secundario a,
+	#menu-terceiro a{
     	  color: white; 
           text-decoration: none; 
+          font-weight: bold;
 	}
 	
-	h2, h3{
-	  color: #0c2a39;	
+	#linha-do-tempo li{
+	  background-color: #ccc;
+	  padding: 12px 20px;
+	  border-radius: 30px;
 	}
 	
-	h3 span{
-	  color: lightblue;
+	#linha-do-tempo li:hover{
+	  box-shadow: 0 4px 10px #09202b;
+	}
+	
+	section{
+	  margin-bottom: 60px;
+	}
+	
+	section h2{
+	  text-align: center;
+	  margin-bottom: 60px;
+	  color:#0c2a39;
 	}	
 	
-	#pioneiros{
-	  gap: 20px;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
+	article{
+	  background-color: white;
+	  padding: 25px;
+	  border-radius: 15px;
+	  margin-bottom: 20px;
+	  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 	}
 	
-	#pioneiros article{
-	  padding: 40px;
-	  background-color: #09202b;
-	  color: white;
-	  border-radius: 30px;
-	  width: 80%;
+	article:hover{
+	  box-shadow: 0 4px 10px #09202b;
 	}
 	
-	#pioneiros img{
+	article h3{
+	  margin-bottom: 10px;
+	  color: #0c2a39;
+	}
+	
+	img{
 	  width: 100%;
-	  display: block;
-	  margin: 0 auto;
+	  border-radius: 10px;
+	  margin-bottom: 0;
 	}
 	
 	img.turing {
- 	  width: 1139px;
- 	  height: 350px;
+ 	  height: 300px;
 	  object-fit: cover;
 	}
 	
+	#bugs img{
+	  height: 400px;
+	  object-fit: cover;
+	}
 	
+	blockquote{
+  	  margin-top: 15px;
+  	  padding: 15px 15px;
+  	  border-left: 5px solid #718fc3;
+  	  background-color: #f1f3f5;
+  	  font-style: italic;
+  	}	
 	
-
+	figure {
+	  text-align: center;
+	  border: thin #c0c0c0 solid;
+	  display: flex;
+	  flex-flow: column;
+	  padding: 5px;
+	  max-width: 100%;
+	  margin: 10px auto;
+	  border-radius: 15px;
+	}
+	
+	figcaption{
+	  font-size: 0.9rem;
+	  margin-top: 5px;
+	}
+	
+	#bugs pre{
+	  background-color: #000000;
+	  color: #2CFF05;
+	  display: flex;
+	  justify-content: center;
+	  font-size: 20px;
+	  align-items: center;
+	  width: 100%;
+	  height: 300px;
+	  margin: 10px auto;
+	  border-radius: 15px;
+	}
+	
+	pre{
+	  background:#eaeaea;
+	  color:#000;
+	  padding:20px;
+	  border-radius:10px;
+	  overflow:auto;
+	  margin-top:10px;
+	}
+	
+	#comandos-secretos pre{
+	  background: #000;
+	  color: white;
+	}
+	
+	#comandos-secretos pre span{
+	  color: orange;
+	}
+	
+	ol, ul{
+	  margin-top: 10px;
+	}
+	
+	li{
+	  margin-bottom: 5px;
+	}
+	
+	a{
+	  text-decoration: none;
+	  color: #6495ED;
+	}
+	
+	code{
+	  background-color: #eaeaea;
+	  padding: 4px 6px;
+	  border-radius: 5px;
+	}
+	
+	table{
+	  width: 100%;
+	  border-collapse: collapse;
+	  margin-top: 20px;
+	  background-color: white;
+	}
+	
+	th, td{
+	  border: 1px solid #09202b;
+	  padding: 10px;
+	  text-align: center;
+	}
+	
+	th{
+	  background-color: #09202b;
+	  color: white;
+	}
+	
+	form{
+	  background: white;
+	  padding: 25px;
+	  border-radius: 15px;
+	  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+	}
+	
+	form:hover{
+	  box-shadow: 0 4px 10px #09202b;
+	}
+	
+	fieldset{
+	  border: none;
+	}
+	
+	label{
+	  display: block;
+	  margin-top: 15px;
+	  margin-bottom: 5px;
+	}
+	
+	input, select, textarea{
+	  width: 100%;
+	  padding: 10px;
+	  border: 1px solid #ccc;
+	  border-radius: 8px;
+	}
+	
+	textarea{
+	  height: 120px;	
+	}
+	
+	input[type="submit"]{
+	  margin-top: 20px;
+	  background-color: #0c2a39;
+	  color: white;
+	  border: none;
+	  cursor: pointer;
+	  font-weight: bold;
+	}
+	
+	input[type="submit"]:hover{
+	  background: #09202b;
+	}
+	
+	footer{
+	  text-align: center;
+	  padding: 30px;
+	  background: #09202b;
+	  color: white;
+	  margin-top: 60px;
+	}
+	
+	footer address{
+	  font-style: normal;
+	  margin-top: 5px;
+	}
