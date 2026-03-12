@@ -1,191 +1,119 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="cupcake">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Curiosidades e fatos históricos da Ciência da Computação">
     <meta name="author" content="Portal Computação">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <title>Arquivo Confuso da Computação</title>
 </head>
 
-<body class="bg-base-200">
+<body>
 
 <div id="pagina">
-<div class="navbar bg-base-100 shadow-sm">
-  <div class="flex-none">
-    <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
-      </div>
-      <ul
-        tabindex="-1"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a href="#pioneiros">Pioneiros</a></li>
-        <li><a href="#bugs">Bugs</a></li>
-        <li><a href="#internet">Internet</a></li>
-        <li><a href="#linguagens">Linguagens</a></li>
-        <li><a href="#linha-do-tempo">Linha do Tempo</a></li>
-        <li><a href="#formulario">Envie Algo</a></li>
-      </ul>
-    </div>
-  </div>
-  </div>
-  <div class="flex-1">
-    <a class="btn btn-ghost text-xl">FrontEnd</a>
-  </div>
-  <div class="flex-none">
-    <label class="swap swap-rotate">
-  <!-- this hidden checkbox controls the state -->
-  <input type="checkbox" class="theme-controller" value="luxury" />
 
-  <!-- sun icon -->
-  <svg
-    class="swap-off h-10 w-10 fill-current"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24">
-    <path
-      d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
-  </svg>
-
-  <!-- moon icon -->
-  <svg
-    class="swap-on h-10 w-10 fill-current"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24">
-    <path
-      d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
-  </svg>
-</label>
-  </div>
-</div>
-    <div
-  class="hero min-h-screen"
-  style="background-image: url(https://storage.googleapis.com/static.meupc.net/wp/1/2022/02/ccm2.jpg);"
->
-    <div class="hero-overlay"></div>
-    <div class="hero-content text-neutral-content text-center">
-    <header class="max-w-md">
-        <h1 class="mb-5 text-5xl font-bold">Arquivo (Quase) Perdido da Ciência da Computação</h1>
-        <p class="mb-5">Uma coletânea caótica de fatos históricos, curiosos e inesperados.</p>
+    <header id="topo">
+        <h1>Arquivo (Quase) Perdido da Ciência da Computação</h1>
+        <p>Uma coletânea caótica de fatos históricos, curiosos e inesperados.</p>
     </header>
+
+    <nav id="menu-principal">
+        <ul>
+            <li><a href="#pioneiros">Pioneiros</a></li>
+            <li><a href="#bugs">Bugs</a></li>
+            <li><a href="#internet">Internet</a></li>
+            <li><a href="#linguagens">Linguagens</a></li>
+            <li><a href="#linha-do-tempo">Linha do Tempo</a></li>
+            <li><a href="#formulario">Envie Algo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="pioneiros">
+            <h2>Pioneiros Esquecidos</h2>
+
+            <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
   </div>
-</div>
-
-    <main class="max-w-6xl mx-auto px-6 py-10 space-y-16">
-        <section id="pioneiros" class="space-y-6">
-        <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Pioneiros esquecidos</div>
-        </div>
-         <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-            <article class="card bg-base-100 image-full shadow-xl w-full">
-                <figure>
-                    <img
-                        src="https://resh.com.br/wp-content/uploads/2023/03/Ada-Lovelace-1024x576.jpg"
-                        alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                <h3 class="card-title">Ada Lovelace</h3>
-                <p>Considerada a primeira programadora da história.</p>
-                <details>
-                    <summary>Ver mais</summary>
-                    <p>Ela escreveu um algoritmo para a Máquina Analítica no século XIX.</p>
-                </details>
-                </div>
-            </article>
-
-            <article class="card bg-base-100 image-full shadow-xl w-full">
-               <figure>
-                    <img
-                        src="https://cdn.thecollector.com/wp-content/uploads/2024/03/alan-turing-genious-enigma-code.jpg"
-                        alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                <h3 class="card-title">Alan Turing</h3>
-                <p>Criador do conceito de Máquina de Turing.</p>
-                <blockquote>
-                    "Podemos ver apenas um pouco do futuro, mas o suficiente para perceber que há muito a fazer."
-                </blockquote>
-                </div>
-            </article>
-        </div>
-
-<div class="card bg-base-100 shadow-sm">
-  <div class="card-body">
-    <div class="card-actions justify-end">
-      <button class="btn btn-square btn-sm">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://media.newyorker.com/photos/64123041652f9d9fe976fff0/4:3/w_1779,h_1334,c_limit/ra1146.jpg" class="w-100" alt="...">
+      <div class="carousel-caption d-full d-md-block">
+        <h5>Ada Lovalece</h5>
+        <p>Considerada a primeira programadora da história.</p>
+        <details>
+            <summary>Ver mais</summary>
+            <p>Ela escreveu um algoritmo para a Máquina Analítica no século XIX.</p>
+        </details>
+      </div>
     </div>
-    <h4>Curiosidade lateral</h4>
-                <p>Durante décadas, o trabalho de Turing foi mantido em segredo.</p>
+    <div class="carousel-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7UC5QTOtxC1GJKb0S7jLp4z3JfukdIEEBpg&s" class="w-100" alt="...">
+      <div class="carousel-caption d-full d-md-block">
+        <h5>Alan Turing</h5>
+        <p>Criador do conceito de Máquina de Turing.</p>
+        <blockquote>
+            "Podemos ver apenas um pouco do futuro, mas o suficiente para perceber que há muito a fazer."
+        </blockquote>
+      </div>
+    </div>
   </div>
-</div>
-           
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>  
+
+
+
+                <aside>
+                    <h4>Curiosidade lateral</h4>
+                    <p>Durante décadas, o trabalho de Turing foi mantido em segredo.</p>
+                </aside>
+            </div>
         </section>
 
-        <section id="bugs" class="space-y-6">
-        
-        <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Histórias de Bugs</div>
-	    </div>
+        <section id="bugs">
+            <h2>Histórias de Bugs</h2>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-	    <div class="card bg-base-100 shadow-sm">
-            <article class="card-body">
-                <h3 class="card-title">O Primeiro Bug Real</h3>
+            <article>
+                <h3>O Primeiro Bug Real</h3>
                 <p>Uma mariposa encontrada em um computador em 1947.</p>
                 <figure>
-                    <img
-      src="https://ids.si.edu/ids/deliveryService?id=NMAH-92-13129&max=600"
-      alt="Bugs" />
+                    <figcaption>Registro do bug colado no relatório técnico.</figcaption>
                 </figure>
-                <figcaption>Registro do bug colado no relatório técnico.</figcaption>
             </article>
-            </div>
-            <div class="card bg-base-100 w-96 shadow-sm">
-            <article class="card-body">
-                <h3 class="card-title">O Vírus Creeper</h3>
+
+            <article>
+                <h3>O Vírus Creeper</h3>
                 <p>Primeiro vírus da história (1971).</p>
                 <p>Mensagem exibida:</p>
-                <figure>
-                    <img
-      src="data:image/jpeg;base64,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"
-      alt="Crepper" />
-                </figure>
+                <pre>
+I'M THE CREEPER : CATCH ME IF YOU CAN
+                </pre>
             </article>
-            </div>
         </section>
 
+        <section id="internet">
+            <h2>Curiosidades da Internet</h2>
 
-        <section id="internet" class="space-y-6">
-        
-        <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Curiosidades da Internet</div>
-	    </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <article class="card bg-base-200 shadow-md p-4">
-                <h3 class="card-title">Primeiro Website</h3>
+            <article>
+                <h3>Primeiro Website</h3>
                 <p>Criado em 1991 por Tim Berners-Lee.</p>
             </article>
 
-            <article class="card bg-base-200 shadow-md p-4">
-                <h3 class="card-title">ARPANET</h3>
+            <article>
+                <h3>ARPANET</h3>
                 <p>A precursora da internet moderna.</p>
                 <ul>
                     <li>Primeira mensagem enviada: "LO"</li>
@@ -193,42 +121,36 @@
                 </ul>
             </article>
 
-            <article class="card bg-base-200 shadow-md p-4">
-                <h3 class="card-title">Emojis e ASCII</h3>
+            <article>
+                <h3>Emojis e ASCII</h3>
                 <p>Antes dos emojis gráficos, usávamos:</p>
                 <code>:-)</code>
                 <code>;-)</code>
                 <code>:-D</code>
             </article>
-        </div>
         </section>
 
-        <section id="linguagens" class="space-y-6">
-            
-        <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Linguagens de Programação</div>
-	    </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <article class="card bg-base-200 shadow-md p-4">
-                <h3 class="card-title">COBOL</h3>
+        <section id="linguagens">
+            <h2>Linguagens de Programação</h2>
+
+            <article>
+                <h3>COBOL</h3>
                 <p>Ainda usado em sistemas bancários.</p>
             </article>
 
-            <article class="card bg-base-200 shadow-md p-4">
-                <h3 class="card-title">C</h3>
+            <article>
+                <h3>C</h3>
                 <p>Base para muitos sistemas operacionais.</p>
             </article>
 
-            <article class="card bg-base-200 shadow-md p-4">
-                <h3 class="card-title">HTML</h3>
+            <article>
+                <h3>HTML</h3>
                 <p>Não é linguagem de programação, mas estrutura a web.</p>
             </article>
-            </div>
+
             <div>
-                <table class="table">
-                    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Linguagens e Ano de Criação</div>
-	    </div>
+                <table border="1">
+                    <caption>Linguagens e Ano de Criação</caption>
                     <thead>
                         <tr>
                             <th>Linguagem</th>
@@ -258,117 +180,29 @@
             </div>
         </section>
 
-        <section id="linha-do-tempo" class="space-y-6">
-        
-        <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Linha do Tempo Aleatória</div>
-	    </div>
+        <section id="linha-do-tempo">
+            <h2>Linha do Tempo Aleatória</h2>
 
-            <ul class="timeline">
-                <li>
-                <div class="timeline-middle">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="h-5 w-5"
-                >
-                    <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clip-rule="evenodd"
-                    />
-                </svg>
-                </div>
-                <div class="timeline-end timeline-box">1837 - Máquina Analítica</div>
-                <hr />
-                </li>
-                <li>
-                <hr />
-                <div class="timeline-middle">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="h-5 w-5"
-                >
-                    <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clip-rule="evenodd"
-                    />
-                </svg>
-                </div>
-                <div class="timeline-end timeline-box">1946 - ENIAC</div>
-                <hr />
-                </li>
-                <li>
-                <hr />
-                <div class="timeline-middle">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="h-5 w-5"
-                >
-                    <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clip-rule="evenodd"
-                    />
-                </svg>
-                </div>
-                <div class="timeline-end timeline-box">1969 - ARPANET</div>
-                <hr />
-                </li>
-                <li>
-                <hr />
-                <div class="timeline-middle">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="h-5 w-5"
-                >
-                <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clip-rule="evenodd"
-                />
-                </svg>
-                </div>
-                <div class="timeline-end timeline-box">1991 - Primeiro site</div>
-                <hr />
-                </li>
-                <li>
-                <hr />
-                <div class="timeline-middle">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="h-5 w-5"
-                >
-                <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clip-rule="evenodd"
-                />
-                </svg>
-                </div>
-                <div class="timeline-end timeline-box">2007 - Popularização dos smartphones</div>
-                <hr />
-                </li>
-            </ul>
+            <ol>
+                <li>1837 - Máquina Analítica</li>
+                <li>1946 - ENIAC</li>
+                <li>1969 - ARPANET</li>
+                <li>1991 - Primeiro site</li>
+                <li>2007 - Popularização dos smartphones</li>
+            </ol>
         </section>
 
 
+</div>
 
-<div class="collapse collapse-arrow bg-base-100 border p-4">
-  <input type="checkbox" name="my-accordion-2" checked="checked" />
-  <div class="collapse-title text-2xl font-bold">Informações que não vão melhorar seu código… mas vão melhorar sua aula.</div>
-  <div class="collapse-content menu-sm"><nav>
-    <ul class="menu menu-horizontal bg-base-300 w-full flex justify-center gap-4">
+
+<header>
+    <h1>Fatos Inúteis (Mas Incríveis) da Ciência da Computação</h1>
+    <p>Informações que não vão melhorar seu código… mas vão melhorar sua aula.</p>
+</header>
+
+<nav>
+    <ul>
         <li><a href="#nomes">Nomes Estranhos</a></li>
         <li><a href="#acidentes">Acidentes Tecnológicos</a></li>
         <li><a href="#dinheiro">Erros Caríssimos</a></li>
@@ -376,18 +210,14 @@
         <li><a href="#form">Envie Algo Inútil</a></li>
     </ul>
 </nav>
-  </div>
-</div>
 
 
-<section id="nomes" class="space-y-6">
-    
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Nomes Estranhos da Computação</div>
-	    </div>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">Spam vem de um presunto</h3>
+<section id="nomes">
+    <h2>Nomes Estranhos da Computação</h2>
+
+    <article>
+        <h3>Spam vem de um presunto</h3>
         <p>
             O termo "spam" para emails indesejados vem de um esquete do 
             <strong>Monty Python</strong> onde a palavra SPAM (marca de presunto enlatado) 
@@ -395,8 +225,8 @@
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">Bluetooth tem nome viking</h3>
+    <article>
+        <h3>Bluetooth tem nome viking</h3>
         <p>
             A tecnologia foi nomeada em homenagem ao rei 
             <em>Harald "Bluetooth" Gormsson</em>, que unificou a Dinamarca.
@@ -404,8 +234,8 @@
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">Bug é literalmente bug</h3>
+    <article>
+        <h3>Bug é literalmente bug</h3>
         <p>
             O famoso inseto encontrado no computador 
             <abbr title="Harvard Mark II">Mark II</abbr> em 1947 
@@ -420,22 +250,20 @@
 </section>
 
 
-<section id="acidentes" class="space-y-6">
-    
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Acidentes Tecnoçógicos Surpreendentes</div>
-	    </div>
+<section id="acidentes">
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O primeiro domínio registrado</h3>
+    <h2>Acidentes Tecnológicos Surpreendentes</h2>
+
+    <article>
+        <h3>O primeiro domínio registrado</h3>
         <p>
             O primeiro domínio da história foi 
             <code>symbolics.com</code> registrado em 1985.
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O erro que quase causou guerra nuclear</h3>
+    <article>
+        <h3>O erro que quase causou guerra nuclear</h3>
         <p>
             Em 1983, um sistema soviético detectou falsamente mísseis americanos.
             O oficial Stanislav Petrov decidiu ignorar o alerta.
@@ -445,8 +273,8 @@
         </blockquote>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O computador que pesava 27 toneladas</h3>
+    <article>
+        <h3>O computador que pesava 27 toneladas</h3>
         <p>
             O ENIAC ocupava 167 m² e consumia energia suficiente para escurecer parte da cidade.
         </p>
@@ -455,22 +283,20 @@
 </section>
 
 
-<section id="dinheiro" class="space-y-6">
+<section id="dinheiro">
 
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Erros Caríssimos</div>
-	    </div>
+    <h2>Erros Caríssimos</h2>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O traço que custou milhões</h3>
+    <article>
+        <h3>O traço que custou milhões</h3>
         <p>
             Em 1962, a NASA perdeu a sonda Mariner 1 por causa de um erro em uma fórmula matemática:
             faltava um simples hífen.
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">Bitcoin jogado no lixo</h3>
+    <article>
+        <h3>Bitcoin jogado no lixo</h3>
         <p>
             Um homem no Reino Unido descartou um HD com 8.000 bitcoins.
         </p>
@@ -482,33 +308,31 @@ Valor atual: melhor não calcular.
 </section>
 
 
-<section id="aleatorio" class="space-y-6">
-    
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Coisas Aleatórias que Você Não Pediu</div>
-	    </div>
+<section id="aleatorio">
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O primeiro emoticon</h3>
+    <h2>Coisas Aleatórias que Você Não Pediu</h2>
+
+    <article>
+        <h3>O primeiro emoticon</h3>
         <p>
             :-) foi sugerido em 1982 por Scott Fahlman.
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">A senha mais usada do mundo</h3>
+    <article>
+        <h3>A senha mais usada do mundo</h3>
         <p><strong>123456</strong></p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O Google já quebrou a internet</h3>
+    <article>
+        <h3>O Google já quebrou a internet</h3>
         <p>
             Em 2009, o Google marcou acidentalmente todos os sites como maliciosos por 40 minutos.
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">Computadores odeiam calor</h3>
+    <article>
+        <h3>Computadores odeiam calor</h3>
         <p>
             Um data center pode usar mais água para resfriamento do que uma pequena cidade.
         </p>
@@ -517,13 +341,11 @@ Valor atual: melhor não calcular.
 </section>
 
 
-<section class="space-y-6">
-    
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Tabela Totalmente Necessária</div>
-	    </div>
+<section>
 
-    <table class="table">
+    <h2>Tabela Totalmente Necessária</h2>
+
+    <table border="1">
         <tr>
             <th>Curiosidade</th>
             <th>Nível de Inutilidade</th>
@@ -544,28 +366,27 @@ Valor atual: melhor não calcular.
 
 </section>
 
-<div class="collapse collapse-arrow bg-base-100 border p-4">
-  <input type="checkbox" name="my-accordion-2" checked="checked" />
-  <div class="collapse-title text-2xl font-bold">Fatos obscuros, bugs absurdos e Easter eggs históricos.</div>
-  <div class="collapse-content menu-sm"><nav>
-    <ul class="menu menu-horizontal bg-base-300 w-full flex justify-center gap-4">
+<header>
+    <h1>Coisas Que Seus Professores Não Contaram Sobre Computação</h1>
+    <p>Fatos obscuros, bugs absurdos e Easter eggs históricos.</p>
+</header>
+
+<nav>
+    <ul>
         <li><a href="#easter-eggs">Easter Eggs</a></li>
         <li><a href="#bugs-absurdos">Bugs Absurdos</a></li>
         <li><a href="#comandos-secretos">Comandos Estranhos</a></li>
         <li><a href="#formulario-secreto">Envie Algo Suspeito</a></li>
     </ul>
 </nav>
-  </div>
-</div>
 
-<section id="easter-eggs" class="space-y-6">
-    
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Easter Eggs Reais e Oficiais</div>
-	    </div>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O Excel 97 tinha um simulador de voo escondido</h3>
+<section id="easter-eggs">
+
+    <h2>Easter Eggs Reais e Oficiais</h2>
+
+    <article>
+        <h3>O Excel 97 tinha um simulador de voo escondido</h3>
         <p>
             O Microsoft Excel 97 escondia um jogo 3D estilo simulador de voo 
             dentro da planilha.
@@ -576,23 +397,23 @@ Valor atual: melhor não calcular.
         </details>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O Google tem um T-Rex escondido</h3>
+    <article>
+        <h3>O Google tem um T-Rex escondido</h3>
         <p>
             Quando você fica sem internet no Chrome, aparece um dinossauro.
             Se apertar espaço, começa um jogo infinito.
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O Windows 95 tinha créditos escondidos</h3>
+    <article>
+        <h3>O Windows 95 tinha créditos escondidos</h3>
         <p>
             Desenvolvedores colocaram seus nomes escondidos dentro do sistema.
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O GitHub já teve um unicórnio voador</h3>
+    <article>
+        <h3>O GitHub já teve um unicórnio voador</h3>
         <p>
             Em versões antigas, existia um modo visual alternativo escondido.
         </p>
@@ -602,14 +423,12 @@ Valor atual: melhor não calcular.
 
 
 
-<section id="bugs-absurdos" class="space-y-6">
-    
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Bugs Absurdos da História</div>
-	    </div>
+<section id="bugs-absurdos">
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O bug que destruiu um foguete em 37 segundos</h3>
+    <h2>Bugs Absurdos da História</h2>
+
+    <article>
+        <h3>O bug que destruiu um foguete em 37 segundos</h3>
         <p>
             Em 1996, o foguete Ariane 5 explodiu por causa de uma conversão de número
             de 64 bits para 16 bits.
@@ -619,8 +438,8 @@ Valor atual: melhor não calcular.
         </blockquote>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O Y2K (Bug do Milênio)</h3>
+    <article>
+        <h3>O Y2K (Bug do Milênio)</h3>
         <p>
             Sistemas antigos usavam apenas dois dígitos para o ano.
             Em 2000, poderiam interpretar "00" como 1900.
@@ -630,16 +449,16 @@ Valor atual: melhor não calcular.
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O bug do Pentium</h3>
+    <article>
+        <h3>O bug do Pentium</h3>
         <p>
             Um erro microscópico na divisão de números em processadores Intel
             causava resultados errados em cálculos específicos.
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O erro que duplicou dinheiro</h3>
+    <article>
+        <h3>O erro que duplicou dinheiro</h3>
         <p>
             Em 2012, um bug em um banco permitiu que clientes sacassem valores inexistentes.
         </p>
@@ -649,14 +468,12 @@ Valor atual: melhor não calcular.
 
 
 
-<section id="comandos-secretos" class="space-y-6">
-    
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Comandos Estranhos e Inúteis</div>
-	    </div>
+<section id="comandos-secretos">
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">Konami Code</h3>
+    <h2>Comandos Estranhos e Inúteis</h2>
+
+    <article>
+        <h3>Konami Code</h3>
         <p>
             ↑ ↑ ↓ ↓ ← → ← → B A
         </p>
@@ -665,8 +482,8 @@ Valor atual: melhor não calcular.
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">sudo make me a sandwich</h3>
+    <article>
+        <h3>sudo make me a sandwich</h3>
         <pre>
 $ sudo make me a sandwich
 Okay.
@@ -674,8 +491,8 @@ Okay.
         <p>Alguns sistemas Linux realmente respondem a isso.</p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">O comando que trava o Windows</h3>
+    <article>
+        <h3>O comando que trava o Windows</h3>
         <pre>
 CON CON
         </pre>
@@ -684,8 +501,8 @@ CON CON
         </p>
     </article>
 
-    <article class="card bg-base-200 shadow-md p-4">
-        <h3 class="card-title">A senha mais comum do planeta</h3>
+    <article>
+        <h3>A senha mais comum do planeta</h3>
         <code>123456</code>
         <p>
             Continua sendo campeã mundial.
@@ -696,13 +513,11 @@ CON CON
 
 
 
-<section class="space-y-6">
-    
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Tabela do Caos Digital</div>
-	    </div>
+<section>
 
-    <table class="table">
+    <h2>Tabela do Caos Digital</h2>
+
+    <table border="1">
         <tr>
             <th>Evento</th>
             <th>Nível de Caos</th>
@@ -728,118 +543,95 @@ CON CON
 </section>
 
 
-<section id="form" class="space-y-6">
+<section id="form">
 
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Envie um Fato Inútil</div>
-	    </div>
-    
-    <div class="max-w-3xl mx-auto">
+    <h2>Envie um Fato Inútil</h2>
+
     <form>
-        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-6">
-            <legend class="fieldset-legend w-full">Cadastro de Inutilidades</legend>
+        <fieldset>
+            <legend>Cadastro de Inutilidades</legend>
 
-            <label class="label">Nome:</label>
-            <input type="text" class="input w-full" placeholder="nome">
+            <label>Nome:</label>
+            <input type="text" name="nome">
 
-            <label class="label">Fato Inútil:</label>
-            <input type="text" class="input w-full" placeholder="fato">
+            <label>Fato Inútil:</label>
+            <input type="text" name="fato">
 
-            <label class="label">Grau de inutilidade (0-10):</label>
-            <input type="number"
-  class="input validator w-full"
-  required
-  placeholder="Digite um número de 0-10"
-  min="1"
-  max="10"
-  title="Must be between be 1 to 10"/>
+            <label>Grau de inutilidade (0-10):</label>
+            <input type="number" name="grau" min="0" max="10">
 
-            <input class="btn btn-neutral mt-4" type="submit" value="Enviar inutilidade">
+            <input type="submit" value="Enviar inutilidade">
         </fieldset>
     </form>
-    </div>
+    
 </section>
- <section id="formulario" class="space-y-6">
- 
-            <section id="formulario-secreto">
-            
-    	    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Envie sua Curiosidade</div>
-	    </div>
-            <div class="max-w-3xl mx-auto">
+ <section id="formulario">
+            <h2>Envie sua Curiosidade</h2>
+
             <form>
-                <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-6">
-                    <legend class="fieldset-legend">Informações</legend>
+                <fieldset>
+                    <legend>Informações</legend>
 
-                    <label class="label">Nome:</label>
-                    <input type="text" class="input w-full" placeholder="nome">
+                    <label>Nome:</label>
+                    <input type="text" name="nome">
 
-                    <label class="label">Email:</label>
-                    <input type="email" class="input w-full" placeholder="e-mail">
+                    <label>Email:</label>
+                    <input type="email" name="email">
 
-                    <label class="label">Categoria:</label>
-                    <select class="select w-full" name="categoria">
-                        <option disabled selected>Pioneiros</option>
+                    <label>Categoria:</label>
+                    <select name="categoria">
+                        <option>Pioneiros</option>
                         <option>Bugs</option>
                         <option>Internet</option>
                         <option>Linguagens</option>
                     </select>
 
-                    <label class="label">Data do fato:</label>
-                    <input type="date" class="input w-full" placeholder="data">
+                    <label>Data do fato:</label>
+                    <input type="date" name="data">
 
-                    <label class="label">Sua curiosidade:</label>
-                    <textarea class="textarea h-24 w-full" placeholder="Digite aqui"></textarea>
-		    
-		    
-                    <input class="btn btn-neutral mt-4" type="submit" value="Enviar">
+                    <label>Sua curiosidade:</label>
+                    <textarea name="curiosidade"></textarea>
+
+                    <input type="submit" value="Enviar">
                 </fieldset>
             </form>
-            </div>
         </section>
 
     
-<section id="formulario-secreto" class="space-y-6">
+<section id="formulario-secreto">
 
-    <div tabindex="0" class="collapse collapse-close bg-base-100 border-base-300 border p-4">
-        <div class="collapse-title text-2xl font-bold">Envie um Bug ou Easter Egg</div>
-</div>
-    <div class="max-w-3xl mx-auto">
+    <h2>Envie um Bug ou Easter Egg</h2>
+
     <form>
-        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-6">
-            <legend class="fieldset-legend">Cadastro Suspeito</legend>
+        <fieldset>
+            <legend>Cadastro Suspeito</legend>
 
-            <label class="label">Seu nome:</label>
-            <input type="text" class="input w-full" placeholder="nome">
+            <label>Seu nome:</label>
+            <input type="text" name="nome">
 
-            <label class="label">Tipo:</label>
-            <select class="select w-full" placeholder="tipo">
-                <option disabled selected>Bug</option>
+            <label>Tipo:</label>
+            <select name="tipo">
+                <option>Bug</option>
                 <option>Easter Egg</option>
                 <option>Comando estranho</option>
             </select>
 
-            <label class="label">Descrição:</label>
-            <textarea  class="textarea h-24 w-full" placeholder="Digite aqui" name="descricao"></textarea>
+            <label>Descrição:</label>
+            <textarea name="descricao"></textarea>
 
-            <label class="label">Grau de estranheza (1-10):</label>
-            <input type="number"
-  class="input validator w-full"
-  required
-  placeholder="Digite um número de 0-10"
-  min="1"
-  max="10"
-  title="Must be between be 1 to 10"/>
+            <label>Grau de estranheza (1-10):</label>
+            <input type="number" min="1" max="10">
 
-            <input class="btn btn-neutral mt-4" type="submit" value="Enviar para os arquivos secretos">
+            <input type="submit" value="Enviar para os arquivos secretos">
         </fieldset>
     </form>
-    </div>
+
 </section>
 
 
 </main>
-<footer class="footer footer-center bg-base-200 text-base-content p-6">
+</body>
+<footer>
     <p>© 2026 Instituto Internacional de Informações Desnecessárias</p>
     <address>Email: inutilidades@caosdigital.com</address>
       <p>&copy; 2026 Arquivo Confuso da Computação</p>
@@ -848,8 +640,9 @@ CON CON
         </address>
          <p>© 2026 Arquivo Ultra-Secreto da Computação</p>
     <address>contato@ultrasecreto.dev</address>
-
 </footer>
+
+</div>
 
 </body>
 </html>
