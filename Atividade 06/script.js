@@ -2,12 +2,12 @@ const cria = document.getElementById("b");
         const btn = document.getElementById("btn");
 
         const estados = {
-            normal: "bichinho fofinho.png",
-            bravo: "bichinho bravo.png",
-            morto: "bichinho morto",
-            feliz: "bichinho feliz.png",
-            comendo: "bichinho comendo.png", 
-            alimentado: "bichinho alimentado.png"
+            normal: "b_normal.png",
+            bravo: "b_bravo.png",
+            morto: "b_morto.png",
+            feliz: "b_feliz.png",
+            comendo: "b_comendo.png", 
+            alimentado: "b_alimentado.png"
         }
 
         let contador = 0;
