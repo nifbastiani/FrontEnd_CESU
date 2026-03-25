@@ -1,231 +1,188 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="caramellatte">
 <head>
-	<meta charset = "UTF-8">
-	<title> Coleção </title>
-  
-  <style>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 
-	* {
-	   margin: 0;
-	   padding: 0;
-	   box-sizing: border-box;
+	<title>Projects</title>
+
+	<style>
+
+	ul{
+		align-items: center;
 	}
-	
-	body{
-	  background-color: #EFE9E1;
-	  font-family: "Comic Sans MS", sans-serif;
-	  color: #2f2f2f;
-	}
-	
-	.home {
-	   height: 100vh;
+
+	#home {
+	   height: 95vh;
 	   display: flex;
 	   align-items: center;
 	   justify-content: center;
 	   gap: 40px;
 	   padding: 40px;
 	}
-        
-	.home img{
-	  width: 300px;
-	  height: 300px;
+
+	#projects{
+	   height: 95vh;
+	   display: flex;
+	   flex-direction: column;
+	   align-items: center;
+	}
+
+	#home img.profile{
+	  width: 500px;
+	  height: 500px;
 	  border-radius: 50%;
-        }
-        
-        .home-texto{
-	  font-size: 20px;
+    }
+
+
+	span{
+		font-weight: bold;
 	}
-        
-        .home-texto h1 span,
-        .home-texto h3 span{
-           color: #c96b3c;
-	}
-	
-	a {
-          color: #c96b3c;
-          text-decoration: none;
-        }
-        
+
 	.container{
-	  background-color: #2f2f2f;
-	  display: flex;
-	  flex-direction: column;
-	  gap: 20px;
-	  padding: 20px;
-	  width: 90%;
-	  margin: auto;
-	  border-radius: 20px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		padding: 20px;
+		width: 90%;
+		margin: 10px auto;
 	}
-	
-	.item {
-	  background-color: #3c3c3c;
-	  display: flex;
-	  align-items: stretch;
-	  padding: 100px;
-	  border-radius: 20px;
-	  color: white;
-	  font-size: 20px;
-	}
-	
-	.item:hover{
-	  border: 2px solid #c96b3c;
-	}
-	
-	.item img {
-	  width: 300px;
-	  height: 300px;
-	  border-radius: 50%;
-	  margin-right: 100px;
-	}
-	
-	.texto h2 {
-	  margin-bottom: 20px;
-	  color: #c96b3c;
-	}
-		
-  </style>
+
+	</style>
 </head>
-
 <body>
-  <section class="home">
-      <img src="https://i.pinimg.com/736x/55/b6/0f/55b60fc8fc06617a65f48d1ec7dcbd02.jpg">
-      
-      <div class="home-texto">
-         <h1>Olá eu sou a <span>Nicole</span></h1><br>
-         <h3>Vou apresentar minha <span>coleção de animes</span> favoritos, e o motivo do porque gosto tanto deles.</h3>   
-      </div>
-  </section>
-	
-	<div class="container">
-	
-		<div class="item">
-		   <img src="https://i.pinimg.com/736x/84/50/30/84503079d10a3a0ecf92bc4e86c3ba38.jpg">
-		   <div class="texto">
-		       <h2>Monster</h2>
-		       <p><strong>Ano:</strong> 2004-2005</p><br>
-                       <p><strong>Gênero:</strong> Thriller psicológico, drama, mistério</p><br>
-                       <p><strong>Dirigido por:</strong> Masayuki Kojima</p><br>
-                       <p><strong>Produzido por:</strong> Madhouse</p><br>
-                       <p><strong>Enredo:</strong> A história acompanha o Dr. Kenzo Tenma, um neurocirurgião que salva a vida de um garoto chamado Johan Liebert, sem saber que ele se tornaria um assassino cruel. Anos depois, Tenma se vê envolvido em uma perseguição moral e psicológica ao tentar impedir os crimes de Johan, enquanto questiona responsabilidade, ética e a natureza do mal humano.</p><br>
-		       <p><strong>Motivo:</strong> Considero esse anime o meu top 1 entre os favoritos, pois a história e os personagens são muito bem escritos e desenvolvidos ao longo dos episódios. O que mais me fez refletir ao assistir Monster foi o contexto em que o antagonista foi criado e como a educação é uma experiência fundamental na formação de seres humanos que atendam às demandas da sociedade. No entanto, esse processo não é totalmente controlável, principalmente quando influenciado por contextos políticos. Outro motivo é a trilha sonora ser simplesmente perfeita e condizente com o mistério e suspense psicológico.</p><br>
-		       <a href="https://myanimelist.net/anime/19/Monster">Sinopse de Monster</a>
+<div class="navbar bg-base-100 shadow-sm">
+  <div class="flex-1">
+    <a class="btn btn-ghost text-xl">Front-End</a>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="#navbar">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+	  <label class="flex cursor-pointer gap-2">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5" />
+    <path
+      d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+  </svg>
+  <input type="checkbox" value="luxury" class="toggle theme-controller" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</label>
+    </ul>
+  </div>
+</div>
 
-		    
-		   </div>
+<section id="home">
+	<img class="profile" src="https://i.pinimg.com/736x/55/b6/0f/55b60fc8fc06617a65f48d1ec7dcbd02.jpg" alt="">
+
+	<div class="max-w-md">
+         <h1 class="text-5xl font-bold">Hello there</h1>
+      	<p class="py-6">
+        MMeu nome é <span>Nicole</span> e eu estou atualmente aprendendo front-end. Esses são alguns de meus primeiros projetos. Clique em Projects ou deslize para baixo.
+		<div style="display: flex; flex-direction: row; gap: 10px;">
+    		<img align="center" alt="Nick-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  			<img align="center" alt="Nick-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  			<img align="center" alt="Nick-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
 		</div>
-		
-		<div class="item">
-		   <img src="https://i.pinimg.com/736x/3f/55/fe/3f55fe1ccdfd22c90f645a9cd2e049b8.jpg">
-		   <div class="texto">
-		       <h2>Attack on Titan</h2>
-		       <p><strong>Ano:</strong> 2013–2023</p><br>
-                       <p><strong>Gênero:</strong> Ação, drama, fantasia sombria</p><br>
-                       <p><strong>Dirigido por:</strong> Tetsurō Araki (temporadas iniciais)</p><br>
-                       <p><strong>Produzido por:</strong> Wit Studio (T1–T3) / MAPPA (T4)</p><br>
-                       <p><strong>Enredo:</strong> A humanidade vive cercada por muralhas para se proteger de titãs, criaturas gigantes que devoram humanos. A história acompanha Eren Yeager e seus aliados enquanto descobrem verdades profundas sobre o mundo, a guerra e a própria liberdade.</p><br>
-                       <p><strong>Motivo:</strong>  Assim como Monster, Attack on Titan teve um grande impacto em mim quando assisti pela primeira vez. A história é muito marcante e complexa, com personagens bem escritos e personalidades fortes, a ponto de a morte de alguns deles mexer bastante com o telespectador. Gosto muito da forma como a obra aborda o tema da liberdade e como as pessoas podem se tornar escravas até mesmo da própria liberdade. Algumas pessoas criticam o final do anime, mas eu acho que ele foi muito bem pensado e acredito que seja o único desfecho realmente plausível. Para mim, foi um final muito emocionante, principalmente por conta da trilha sonora impecável.</p><br>
-		       <a href="https://myanimelist.net/anime/16498/Shingeki_no_Kyojin">Sinopse de Attack on Titan</a>
-		   </div>
-		</div>
-		
-		<div class="item">
-		   <img src="https://i.pinimg.com/736x/f7/21/e3/f721e3072e50454f7961bc0509297835.jpg">
-		   <div class="texto">
-		       <h2>The Apothecary Diaries</h2>
-		       <p><strong>Ano:</strong> 2023</p><br>
-                       <p><strong>Gênero:</strong> Drama, mistério, histórico</p><br>
-                       <p><strong>Dirigido por:</strong> Norihiro Naganuma</p><br>
-                       <p><strong>Produzido por:</strong> TOHO animation / OLM</p><br>
-                       <p><strong>Enredo:</strong> Maomao, uma jovem apotecária, acaba trabalhando no palácio imperial e usa seus conhecimentos sobre ervas e venenos para resolver mistérios médicos e intrigas da corte.</p><br>
-                       <p><strong>Motivo:</strong> Uma das coisas que me faz gostar dessa obra é o fato de a protagonista ser do gênero feminino e não ser uma personagem genérica. Maomao é uma jovem com muito conhecimento em ervas medicinais e possui uma lógica incrível para resolver alguns mistérios. Ela não demonstra muito seus sentimentos, mas isso não a torna antipática; o jeito dela é cativante, por assim dizer. O anime também conta com algumas cenas engraçadas, o que deixa a experiência mais leve de assistir, mas ainda assim mantém um enredo bom e interessante.</p><br>
-		       <a href="https://myanimelist.net/anime/54492/Kusuriya_no_Hitorigoto">Sinopse de The Apothecary Diaries</a>
-		   </div>
-		</div>
-		
-		<div class="item">
-		   <img src="https://i.pinimg.com/736x/82/c9/96/82c9961ea42b0dd8a0cd7e693620d266.jpg">
-		   <div class="texto">
-		       <h2>Meu Amigo Totoro</h2>
-		       <p><strong>Ano:</strong> 1988</p><br>
-                       <p><strong>Gênero:</strong> Fantasia, slice of life</p><br>
-                       <p><strong>Dirigido por:</strong> Hayao Miyazaki</p><br>
-                       <p><strong>Produzido por:</strong> Studio Ghibli</p><br>
-                       <p><strong>Enredo:</strong> Duas irmãs se mudam para o interior do Japão e passam a conviver com espíritos da floresta, incluindo o gentil Totoro, enquanto lidam com mudanças e sentimentos familiares.</p><br>
-                       <p><strong>Motivo:</strong> Meu Amigo Totoro é aquele tipo de anime que eu assisto como forma de conforto. Geralmente, os filmes do Studio Ghibli têm trilhas sonoras calmas e relaxantes, e eu adoro como essas histórias de fantasia fazem a gente lembrar da infância. Nesse filme, é muito bonito acompanhar a relação das duas irmãzinhas e a forma como elas tentam dar o melhor de si enquanto a mãe se recupera no hospital. Elas acabam encontrando um conforto em comum no Totoro, uma espécie de ser místico que cuida da natureza. O que deixa tudo ainda mais fofo é a maneira como o pai delas acredita nas filhas e nesse ser místico.</p><br>
-		       <a href="https://myanimelist.net/anime/523/Tonari_no_Totoro?q=totoro&cat=anime">Sinopse de Meu Amigo Totoro</a>
-		   </div>
-		</div>
-		
-		<div class="item">
-		   <img src="https://i.pinimg.com/736x/25/3f/ed/253fed2ca9ee25a89c9baf6b6192ddb4.jpg">
-		   <div class="texto">
-		       <h2>Ponyo</h2>
-		       <p><strong>Ano:</strong> 2008</p><br>
-                       <p><strong>Gênero:</strong> Fantasia, aventura</p><br>
-                       <p><strong>Dirigido por:</strong> Hayao Miyazaki</p><br>
-                       <p><strong>Produzido por:</strong> Studio Ghibli</p><br>
-                       <p><strong>Enredo:</strong> Ponyo, uma peixinha mágica, deseja se tornar humana após criar um forte laço com um garoto chamado Sosuke, desencadeando desequilíbrios entre o mar e a terra.</p><br>
-                       <p><strong>Motivo:</strong> Ponyo, além de ser bonitinho, também é engraçado. Gosto muito de como a personagem Ponyo é completamente agitada, ao contrário de Sosuke, que é um garoto obediente e respeitoso. Ao longo do filme, os dois vivem uma aventura em meio ao caos causado por Ponyo ao fugir do mar, mas, independentemente do que acontece, eles permanecem juntos. Acredito que o que mais me encanta nesse filme é o amor genuíno entre duas crianças.</p><br>
-		       <a href="https://myanimelist.net/anime/2890/Gake_no_Ue_no_Ponyo?q=ponyo&cat=anime">Sinopse de Ponyo</a>
-		   </div>
-		</div>
-		
-		<div class="item">
-		   <img src="https://i.pinimg.com/736x/04/d4/e3/04d4e320d7a20603017b44ab89e3d080.jpg">
-		   <div class="texto">
-		       <h2>Violet Evergarden</h2>
-		       <p><strong>Ano:</strong> 2018</p><br>
-                       <p><strong>Gênero:</strong> Drama, romance</p><br>
-                       <p><strong>Dirigido por:</strong> Taichi Ishidate</p><br>
-                       <p><strong>Produzido por:</strong> Kyoto Animation</p><br>
-                       <p><strong>Enredo:</strong> Violet, uma ex-soldado, tenta compreender sentimentos humanos e o significado do amor enquanto trabalha escrevendo cartas para outras pessoas.</p><br>
-                       <p><strong>Motivo:</strong> Eu amo a arte dessa obra e como os personagens são bonitos, mas principalmente a forma como a protagonista, Violet, busca encontrar sentido e valor na própria vida depois de perder a única pessoa que a amou. Após a guerra, por ordem de seu ex-capitão, ela começa a tentar viver uma vida comum para alguém da sua idade, porém não consegue se adaptar, sempre esperando receber ordens e reprimindo os próprios sentimentos. Acho muito bonito o modo como ela busca se curar ouvindo e escrevendo os sentimentos de outras pessoas; mesmo sem entendê-los no início, Violet continua tentando. O último filme do anime é simplesmente maravilhoso.</p><br>
-		       <a href="https://myanimelist.net/anime/33352/Violet_Evergarden?q=violet%20evergarden&cat=anime">Sinopse de Violet Evergarden</a>
-		   </div>
-		</div>
-		
-		<div class="item">
-		   <img src="https://i.pinimg.com/736x/a1/c9/43/a1c943534892bb0962dbfad1d6f64bf1.jpg">
-		   <div class="texto">
-		       <h2>Blue Period</h2>
-		       <p><strong>Ano:</strong> 2021</p><br>
-                       <p><strong>Gênero:</strong> Drama, slice of life</p><br>
-                       <p><strong>Dirigido por:</strong> Kōji Masunari</p><br>
-                       <p><strong>Produzido por:</strong> Seven Arcs</p><br>
-                       <p><strong>Enredo:</strong> Yatora, um estudante comum, descobre a paixão pela arte e decide enfrentar o difícil caminho para ingressar em uma universidade de belas-artes.</p><br>
-                       <p><strong>Motivo:</strong> Blue Period é uma obra com a qual me identifiquei profundamente por meio do personagem principal, Yatora, que sempre foi um aluno de boas notas e tinha como objetivo seguir uma carreira profissional que atendesse aos padrões e valores impostos pela sociedade. No entanto, esse planejamento muda completamente quando ele descobre sua paixão pela arte, passando a enfrentar conflitos internos como julgamentos internalizados, o medo de decepcionar os próprios pais e a necessidade de se esforçar ainda mais para alcançar o nível daqueles considerados gênios. A obra aborda temas como insegurança, dúvidas, comparação, a tensão entre talento e esforço e, principalmente, o processo de autoconhecimento.</p><br>
-		       <a href="https://myanimelist.net/anime/46352/Blue_Period">Sinopse de Blue Period</a>
-		   </div>
-		</div>
-		
-		<div class="item">
-		   <img src="https://i.pinimg.com/736x/07/2f/08/072f083d9fd02febe1d77a7dd0dd58f0.jpg">
-		   <div class="texto">
-		       <h2>Cowboy Bebop</h2>
-		       <p><strong>Ano:</strong> 1998</p><br>
-                       <p><strong>Gênero:</strong> Ação, ficção científica, western</p><br>
-                       <p><strong>Dirigido por:</strong> Shinichirō Watanabe</p><br>
-                       <p><strong>Produzido por:</strong> Sunrise</p><br>
-                       <p><strong>Enredo:</strong> Um grupo de caçadores de recompensas viaja pelo espaço lidando com crimes, passados traumáticos e a solidão, ao som de uma trilha sonora marcante de jazz.</p><br>
-                       <p><strong>Motivo:</strong> A trilha sonora do anime é marcante e contribui significativamente para a atmosfera da obra. Os personagens são caçadores de recompensas, cada um com uma personalidade forte, e todos lidam com traumas do passado. A solidão é um sentimento comum entre eles e, de certa forma, é o que os une temporariamente como uma família. No entanto, ao final, eles não seguem juntos, pois alguns permanecem presos às próprias lembranças e ao passado.</p><br>
-		       <a href="https://myanimelist.net/anime/1/Cowboy_Bebop">Sinopse de Cowboy Bebop</a>
-		   </div>
-		</div>
-		
-		<div class="item">
-		   <img src="https://i.pinimg.com/1200x/23/7e/f9/237ef9f2814af23c9279bf2c50b3b6c0.jpg">
-		   <div class="texto">
-		       <h2>Neon Genesis Evangelion</h2>
-		       <p><strong>Ano:</strong> 1995-1996</p><br>
-                       <p><strong>Gênero:</strong> Ficção científica, psicológico, drama/p><br>
-                       <p><strong>Dirigido por:</strong> Hideaki Anno</p><br>
-                       <p><strong>Produzido por:</strong> Gainax</p><br>
-                       <p><strong>Enredo:</strong> Adolescentes pilotam robôs gigantes para proteger a humanidade de seres conhecidos como Anjos, enquanto enfrentam conflitos emocionais profundos e questões existenciais.</p><br>
-                       <p><strong>Motivo:</strong> Neon Genesis Evangelion aborda os conflitos emocionais de seus personagens de forma profunda. Nos episódios iniciais, a narrativa apresenta uma maior quantidade de ação devido aos ataques dos Anjos, além de contextualizar o enredo e o universo da história. Já nos episódios finais, o foco se desloca para o caos interno de cada personagem, representado como uma espécie de interrogatório psicológico. Essa parte foi a que mais me deixou reflexiva pois ocorre a ruptura dos paradigmas internos dos personagens. Na primeira vez em que assisti, a obra pareceu confusa, porém o drama psicológico apresentado é o mais interessante.</p><br>
-		       <a href="https://myanimelist.net/anime/30/Shinseiki_Evangelion?q=neon%20genesis%20evangelion&cat=anime">Sinopse de Neon Genesis Evangelion</a>
-		   </div>
-		</div>
+    </div>
+</section>
+
+<section id="projects">
+	<div class="hero-content text-center">
+	<div class="max-w-md">
+        <h1 class="text-5xl font-bold">Projetos</h1>
 	</div>
+	</div>
+
+	<div class="container">
+
+		<div class="card card-border bg-base-100 w-full">
+  			<div class="card-body">
+    			<h2 class="card-title">Atividade 01 - Coleção de Animes</h2>
+    			<p>Primeiro projeto foi apenas usando html para estruturar a página, e estilizar usando a tag style dentro da página de html... Eu quis ir um pouquinho mais além e pesquisei como usar divs e aprendi algumas coisas de flexbox com o Gustavo Guanabara.</p>
+    			<div class="card-actions justify-end">
+      				<button class="btn btn-link"><a href="https://nifbastiani.github.io/FrontEnd_CESU/Atividade%2001/">Open</a></button>
+    			</div>
+  			</div>
+		</div>
+
+		<div class="card card-border bg-base-100 w-full">
+  			<div class="card-body">
+    			<h2 class="card-title">Atividade 02 - Explicando algum conteúdo</h2>
+    			<p>Nessa atividade escolhemos algum conteúdo que já haviamos estudado na faculdade para explicar e construir uma paǵina estruturada com conteúdo, formulários e exercícios.</p>
+    			<div class="card-actions justify-end">
+      				<button class="btn btn-link"><a href="https://nifbastiani.github.io/FrontEnd_CESU/Atividade%2002/">Open</a></button>
+    			</div>
+  			</div>
+		</div>
+
+		<div class="card card-border bg-base-100 w-full">
+  			<div class="card-body">
+    			<h2 class="card-title">Atividade 03 - Estilizando página com CSS</h2>
+    			<p>Nessa atividade o professor nos passou um arquivo sobre informações e curiosidades da Ciência da Computação e nós tivemos que estilizar a página, usando nossos conhecimentos em CSS.</p>
+    			<div class="card-actions justify-end">
+      				<button class="btn btn-link"><a href="https://nifbastiani.github.io/FrontEnd_CESU/Atividade%2003/">Open</a></button>
+    			</div>
+  			</div>
+		</div>
+
+		<div class="card card-border bg-base-100 w-full">
+  			<div class="card-body">
+    			<h2 class="card-title">Atividade 04 - Usando DaisyUI</h2>
+    			<p>Nessa atividade aprendemos a usar frameworks, no caso DaisyUI para estilizar o mesmo arquivo da atividade 03.</p>
+    			<div class="card-actions justify-end">
+      				<button class="btn btn-link"><a href="https://nifbastiani.github.io/FrontEnd_CESU/Atividade%2004/">Open</a></button>
+    			</div>
+  			</div>
+		</div>
+
+		<div class="card card-border bg-base-100 w-full">
+  			<div class="card-body">
+    			<h2 class="card-title">Atividade 05 - Usando Bootstrap</h2>
+    			<p>Nessa atividade aprendemos a usar frameworks, no caso Bootstrap para estilizar o mesmo arquivo da atividade 03.</p>
+    			<div class="card-actions justify-end">
+      				<button class="btn btn-link"><a href="https://nifbastiani.github.io/FrontEnd_CESU/Atividade%2005/">Open</a></button>
+    			</div>
+  			</div>
+		</div>
+
+		<div class="card card-border bg-base-100 w-full">
+  			<div class="card-body">
+    			<h2 class="card-title">Atividade 06 - Aplicando JS</h2>
+    			<p>Nessa atividade começamos a aplicar JavaScript, criamos um pet virtual com IA e fizemos diferentes estados do pet (feliz, bravo, comendo, ...) e usamos um contador usando a linguagem JS para mudar esses estados.</p>
+    			<div class="card-actions justify-end">
+      				<button class="btn btn-link"><a href="https://nifbastiani.github.io/FrontEnd_CESU/Atividade%2006/">Open</a></button>
+    			</div>
+  			</div>
+		</div>
+
+	</div>
+
+</section>
+
 </body>
 </html>
