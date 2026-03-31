@@ -1,5 +1,10 @@
         const cria = document.getElementById("b");
         const btn = document.getElementById("btn");
+        const fundoDia = "bg_light.png";
+        const fundoNoite = "bg_dark.png";
+        const themeToggle = document.getElementById("theme-toggle");
+
+        let horas = 0;
 
         const estados = {
             normal: "b_normal.png",
@@ -50,4 +55,21 @@
     }, 1000);
     }
 
+    function atualizarFundo(){
+        if (horas) clearInterval(horas);
+        
+        horas = setInterval(() => {
+            horas++;
+
+            if (horas >= 12) {
+                document.body.style.backgroundImage = `url('${fundoNoite}')`;
+            } else {
+                document.body.style.backgroundImage = `url('${fundoDia}')`;
+            }
+
+            if(horas >=24) horas = 0;
+        }, 1000);
+    }
+
 	controlador();
+    atualizarFundo();
