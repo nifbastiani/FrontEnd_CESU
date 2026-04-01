@@ -2,7 +2,6 @@
         const btn = document.getElementById("btn");
         const fundoDia = "bg_light.png";
         const fundoNoite = "bg_dark.png";
-        const themeToggle = document.getElementById("theme-toggle");
 
         let horas = 0;
 
@@ -73,3 +72,4 @@
 
 	controlador();
     atualizarFundo();
+    
