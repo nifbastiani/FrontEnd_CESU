@@ -60,7 +60,7 @@ function atualizarTela(){
 		</strong> <small>${item.quantidade} X ${item.preco} = 
 		<strong> ${item.subTot}</strong></small></div>`;
 		
-		lista.appendChild(li);
+		list.appendChild(li);
 	});
 	
 }
