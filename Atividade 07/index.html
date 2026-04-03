@@ -9,37 +9,77 @@
 
 
 	<style>
+		body{
+    			background-color: #cad8e6;
+    			font-family: Arial, sans-serif;
+		}
 		.topo{
-			background: #ffc107;
+			background: #78a3c5;
 			text-align: center;		
 			font-size: 43px;
 			font-weight: bold;
 			padding: 15px;
-			border: 4px solid #000faf;
+			border: 4px solid #ffeccf;
+			color: #ffeccf;
+			border-radius: 12px;
 		}
 		.painel{
-			background: #8a8a8a;
+			background: #fff7eb;
 			padding: 20px;		
-			border: 2px solid #000faf;
+			border: 2px solid #78a3c5;
 			margin-bottom: 10px;
+			border-radius: 10px;
 		}
 		.total{
 			font-size: 33px;		
 			text-align: right;
 			font-weight: bold;
-			color: #000faf;
+			color: #78a3c5;
+		}
+		.titulo-badge{
+			background-color: #a2c4d8;
+			color: white;
+			font-size: 18px;
+			padding: 10px 15px;
+			border-radius: 10px;
+		}
+		.btn-add{
+			background-color: #78a3c5;
+			color: white;
+			font-weight: bold;
+			border: none;
+			padding: 12px;
+			border-radius: 10px;
+			transition: 0.3s;
+		}
+		btn-add:hover{
+			backgrond-color: #5f8eaf;
+			color: white;
+		}
+		.form-control{
+			border: 2px solid #a2c4d8;
+			border-radius: 10px;
+		}
+		.form-control:focus{
+			border-color: #78a3c5;
+			box-shadow: 0 0 0 0.2rem rgba(120, 163, 197, 0.25);
+		}
+		.list-group-item{
+			background-color: #fff7eb;
+			border: 1px solid #ffeccf;
+			color: #5f7f97;
 		}
 	</style>
 
 </head>
 
-<body class="bg-primary bg-gradient">
+<body>
 <div class="container mt-2">
 	<div class="topo"> CAIXA LIVRE </div>
 
 	<div class="row mt-3">
 		<div class="col-md-7">
-			<h3 class="text-white"><span class="badge text-bg-primary">SUAS COMPRAS</span></h3>
+			<h3><span class="badge titulo-badge">SUAS COMPRAS</span></h3>
 			<ul id="lista" class="list-group lista"> </ul>
 		</div>
 
@@ -54,7 +94,7 @@
 				<input type="number" id="qtd" class="form-control" value=1>
 			</div>
 			
-			<div class="btn btn-success w-100" onclick="addProduto()">
+			<div class="btn btn-add w-100" onclick="addProduto()">
 			Adicionar Item
 			</div>
 		</div>

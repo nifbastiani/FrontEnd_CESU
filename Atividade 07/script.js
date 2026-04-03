@@ -1,8 +1,8 @@
 const produtos = {
-	"123": {"nome": "arroz", "preco": 9.90},
-	"456": {"nome": "feijão", "preco": 19.90},
-	"789": {"nome": "óleo", "preco": 29.90},
-	"147": {"nome": "macarrão", "preco": 39.90}
+	"123": {"nome": "arroz", "preco": 6.90},
+	"456": {"nome": "feijão", "preco": 5.69},
+	"789": {"nome": "óleo", "preco": 8.00},
+	"147": {"nome": "macarrão", "preco": 5.00}
 };
 
 let carrinho = [];
@@ -47,7 +47,7 @@ function addProduto(){
 function atualizarTela(){
 	
 	const list = document.getElementById("lista");
-	
+	list.innerHTML = "";
 	let total = 0;
 	
 	carrinho.forEach((item, index) => {
