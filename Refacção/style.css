@@ -84,3 +84,19 @@
         flex-direction: column;
         background-color: #4751ad;
     }
+
+    button{
+        background-color: #4751ad;
+        color:#faf8f7;
+        padding: 10px;
+        border-radius: 15px;
+        border: 2px solid #2f377a;
+    }
+
+    button:hover{
+        background-color: #2f377a;
+        color:#faf8f7;
+        padding: 10px;
+        border-radius: 15px;
+        border:2px solid #4751ad;
+    }
