@@ -30,7 +30,7 @@ function editar(button){
 function concluir(button){
   const taskToConclude = button.parentElement;
   if (taskToConclude.classList.toggle('completed')){
-    button.innnerHTML = `Desmarcar`;
+    button.innerHTML = `Desmarcar`;
   }else{
     button.innerHTML = `Concluir`;
   }
