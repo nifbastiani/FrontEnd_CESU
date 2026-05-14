@@ -37,3 +37,24 @@ li.completed span{
 button {
     margin-top: 10px;
 }
+
+.aprovado{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.reprovado{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.exame{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    
+}
