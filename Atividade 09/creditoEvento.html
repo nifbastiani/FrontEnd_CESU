@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atividade 09</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="todo-app" style="display: flex; justify-content: center; flex-direction: column; text-align: left; gap: 8px;">
+        <h2>Crédito Festas & Eventos</h2>
+        <label for="pessoas">Quantidade de pessoas:</label>
+        <input type="number" id="pessoas" placeholder="0">
+        <label for="pacote">Escolha um dos Pacotes:</label>
+        <select name="pacote" id="pacote">
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
+            <option value="deluxe">Infinity Deluxe</option>
+        </select>
+        <button id="calcularOrcamento">Calcular Orçamento</button>
+        <div id="resultadoOrcamento">
+            
+        </div>
+    </div>
+<script>
+document.getElementById("calcularOrcamento").addEventListener("click", calcularOrcamento);
+
+function calcularOrcamento() {
+  const pessoas = parseInt(document.getElementById("pessoas").value);
+  const pacote = document.getElementById("pacote").value;
+
+  let custoBruto = 0;
+
+  switch (pacote) {
+    case "standard":
+      custoBruto = 50 * pessoas;
+      break;
+    case "premium":
+      custoBruto = 80 * pessoas;
+      break;
+    case "deluxe":
+      custoBruto = 120 * pessoas;
+      break;
+  }
+
+  const taxaServico = custoBruto * 0.1;
+  let desconto = 0;
+
+  if (pessoas > 100) {
+    desconto = custoBruto * 0.05;
+  }
+
+  const total = custoBruto + taxaServico - desconto;
+
+  document.getElementById("resultadoOrcamento").innerHTML = `
+    <p>Custo Bruto: R$ ${custoBruto.toFixed(2)}</p>
+    <p>Valor da Taxa de Serviço: R$ ${taxaServico.toFixed(2)}</p>
+    <p>Desconto: R$ ${desconto.toFixed(2)}</p>
+    <p>Total: R$ ${total.toFixed(2)}</p>`;
+  document.getElementById("resultadoOrcamento").classList.add("taxa");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atividade 09</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="todo-app" style="display: flex; justify-content: center; flex-direction: column; text-align: left; gap: 8px;">
+        <h2>Taxa Infinity Bank</h2>
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" placeholder="R$ 0,00">
+        <label for="bandeiras">Selecione uma das bandeiras:</label>
+        <select name="bandeiras" id="bandeiras">
+            <option value="visa">Visa</option>
+            <option value="master">Master</option>
+            <option value="elo">Elo</option>
+        </select>
+        <label for="parcelas">Quantidade de parcelas:</label>
+        <select name="parcelas" id="parcelas">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+        </select>
+        <button id="calcularTaxa">Calcular Taxa</button>
+        <div id="resultadoJuros">
+            
+        </div>
+    </div>
+<script>
+document.getElementById("calcularTaxa").addEventListener("click", calcularTaxaJuros);
+
+function calcularTaxaJuros() {
+  const valor = parseFloat(document.getElementById("valor").value);
+  const bandeira = document.getElementById("bandeiras").value;
+  const qt_parcelas = parseInt(document.getElementById("parcelas").value);
+  let taxaBandeira = 0;
+
+  switch (bandeira) {
+    case "visa":
+      taxaBandeira = valor * 0.02;
+      break;
+    case "master":
+      taxaBandeira = valor * 0.0185;
+      break;
+    case "elo":
+      taxaBandeira = valor * 0.03;
+      break;
+  }
+
+  const juros = valor * 0.0035 * qt_parcelas;
+  const taxaMensal = 12.50 * qt_parcelas;
+  const valorTotal = valor + taxaBandeira + juros + taxaMensal;
+  const valorParcela = valorTotal / qt_parcelas;
+
+  document.getElementById("resultadoJuros").innerHTML = `
+    <p>Valor da Taxa: R$ ${taxaBandeira.toFixed(2)}</p>
+    <p>Valor dos Juros: R$ ${juros.toFixed(2)}</p>
+    <p>Valor de cada Parcela: R$ ${valorParcela.toFixed(2)}</p>`;
+    resultadoJuros.classList.add("taxa");
+}
+</script>
+</body>
+</html>

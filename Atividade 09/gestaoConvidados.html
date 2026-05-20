@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="todo-app">
+        <h2>Gestão Convidados VIP's</h2>
+        <input type="text" id="taskInput" placeholder="Adicione um novo convidado" style="width: 90%;">
+        <button onclick="addTask()">Adicionar</button>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+const taskInput = document.getElementById('taskInput');
+const taskList = document.getElementById('taskList');
+
+function addTask(){
+  const textInput = taskInput.value.trim();
+  if(textInput !== ''){
+    const newTask = document.createElement('li');
+    
+    newTask.innerHTML =
+      `<span>${textInput}</span>
+        
+       <button onclick="editar(this)">Editar</button>
+       <button onclick="remover(this)">Remover</button>
+       <button onclick="concluir(this)">Concluir</button>
+      `
+    taskList.appendChild(newTask);
+  }
+}
+
+function remover(button){
+  const taskToRemove = button.parentElement;
+  taskList.removeChild(taskToRemove);
+}
+
+function editar(button){
+  const taskToEdit = button.parentElement;
+  const taskText = taskToEdit.querySelector('span'); 
+
+  const newText = prompt('Edite sua tarefa...', taskText.textContent); 
+  taskText.textContent = newText;
+}
+
+function concluir(button){
+  const taskToConclude = button.parentElement;
+  
+  if (taskToConclude.classList.toggle('completed')){
+    button.innerHTML = `Desmarcar`;
+  }else{
+    button.innerHTML = `Concluir`;
+  }
+}
+</script>
+</html>
